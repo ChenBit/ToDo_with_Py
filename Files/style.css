@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+}
+/* 优化后的整合样式 */
+.container {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 12px 24px;
+    background: #0066FF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 24px;
+    background: #7ab5f3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.1s;
+}
+
+button:hover {
+    background: #7ab5f3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Windows 11风格优化 */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: url('Background.jpg') center/cover fixed;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px) saturate(180%);
+    z-index: -1;
+}
+
+/* 删除重复的.container定义 */
+.container {
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background: #0066FF;
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+li {
+    transition: transform 0.3s, opacity 0.3s;
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.4s ease-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.delete-btn {
+    transition: color 0.2s;
+    color: #470007;
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .input-group {
+    flex-direction: column;
+  }
+  button {
+    width: 100%;
+    padding: 3%;
+  }
+
+  .delete-btn {
+    width: 20%;
+    padding: 3%;
+  }
+}
